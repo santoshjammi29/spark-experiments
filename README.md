@@ -37,8 +37,8 @@ This repository is the ultimate guide for mastering advanced Spark Performance T
 | 4 | **EXPLAIN Plan (Spark Query Plan)** | 🟡<br>Intermediate | A Spark debugging tool that displays the logical and physical execution plan for a DataFrame or SQL query, enabling engineers to verify optimisations, diagnose performance issues, and understand data flow. |
 | 5 | **Lazy Evaluation** | 🟡<br>Intermediate | An execution strategy where Spark delays query executions until an action is explicitly requested. |
 | 6 | **PySpark Vectorized Pandas UDF Architecture** | 🟡<br>Intermediate | Using Apache Arrow record batches to pass columnar data between the JVM and Python worker processes with high efficiency. |
-| 7 | **Reading the Spark UI** | 🟡<br>Intermediate | The tabs that matter: Jobs, Stages, Tasks, SQL. |
-| 8 | **Shuffle Operations** | 🟡<br>Intermediate | What triggers a shuffle (groupBy, join, repartition, distinct). |
+| 7 | **Reading the Spark UI** | 🟡<br>Intermediate | The web-based performance monitoring and telemetry dashboard used to inspect execution plans, identify straggler tasks, detect memory spill, and profile shuffle I/O across Spark Jobs, Stages, and SQL DAGs. |
+| 8 | **Shuffle Operations** | 🟡<br>Intermediate | The distributed physical data redistribution process across cluster executor nodes triggered by wide transformations such as `groupBy()`, `join()`, `distinct()`, and `repartition()`. |
 | 9 | **Spark Broadcast Hash Join (BHJ)** | 🟡<br>Intermediate | A distributed join strategy in Apache Spark that distributes an entire small DataFrame to all executor nodes to eliminate costly shuffle operations. |
 | 10 | **Stage Boundary** | 🟡<br>Intermediate | A stage boundary in Spark marks the point where a wide transformation (shuffle) separates two stages, requiring all tasks in the upstream stage to complete before the downstream stage begins. |
 | 11 | **Storage Level: MEMORY_AND_DISK** | 🟡<br>Intermediate | A Spark cache storage level that stores partitions in JVM heap memory and spills remaining partitions to local executor disk if memory is insufficient. |
@@ -48,7 +48,7 @@ This repository is the ultimate guide for mastering advanced Spark Performance T
 | 15 | **Bucket Join** | 🔴<br>Advanced | A Spark join optimisation that eliminates shuffle entirely by pre-bucketing both tables on the join key with the same number of buckets, co-locating matching keys on the same partitions. |
 | 16 | **Catalyst Optimizer — Analysis Phase** | 🔴<br>Advanced | The first phase of Spark's Catalyst Optimizer where unresolved logical plans are validated against the catalog to produce a resolved logical plan. |
 | 17 | **Catalyst Optimizer — Physical Planning** | 🔴<br>Advanced | The phase of Spark's Catalyst Optimizer that selects the most efficient physical execution strategy from multiple candidate plans using a cost model. |
-| 18 | **Data Skew: Detection & Mitigation** | 🔴<br>Advanced | Recognizing skew in Spark UI (one task takes 10x longer). |
+| 18 | **Data Skew: Detection & Mitigation** | 🔴<br>Advanced | The process of diagnosing uneven record distributions across executor partitions using Spark UI percentiles, resolved via Adaptive Query Execution (AQE) skew join splitting or two-phase key salting. |
 | 19 | **G1GC Garbage Collector in Spark** | 🔴<br>Advanced | The Garbage-First (G1) GC is the recommended JVM garbage collector for Spark executors, offering predictable pause times and better heap region management than the older ParallelGC. |
 | 20 | **Memory Spill to Disk** | 🔴<br>Advanced | A performance degradation state where Spark runs out of executor RAM and writes execution buffers to disk. |
 | 21 | **Off-Heap Memory** | 🔴<br>Advanced | Memory allocated outside the JVM heap using native OS memory, bypassing garbage collection entirely and managed explicitly by Project Tungsten's memory manager. |
