@@ -1,0 +1,44 @@
+name: CI — Spark Experiments Integrity & Test Suite
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install ruff pytest
+
+      - name: Lint with Ruff
+        run: |
+          ruff check . --exit-zero
+
+      - name: Run Integrity & Notebook Test Suite
+        run: |
+          python3 scripts/run_tests.py
+
+      - name: Verify Git Hygiene
+        run: |
+          if git ls-files | grep -q '\.venv'; then
+            echo "FAIL: .venv tracked in git index"
+            exit 1
+          fi
+          if git ls-files | grep -q '\.parquet'; then
+            echo "FAIL: .parquet files tracked in git index"
+            exit 1
+          fi
+          echo "Git hygiene verified: No .venv or .parquet files in index."

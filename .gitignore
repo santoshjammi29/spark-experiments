@@ -10,7 +10,11 @@
 # VSCode
 .vscode
 
-# Files/Directories
+# Python
+.venv/
+__pycache__/
+*.pyc
+
 interview
 spark/to_include_later
 
@@ -29,3 +33,7 @@ spark/metastore_db
 spark/spark-warehouse
 spark/derby.log
 spark/test
+# Additional hygiene
+*.parquet
+.pytest_cache/
+*.egg-info/
