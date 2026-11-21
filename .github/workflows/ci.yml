@@ -21,7 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install ruff pytest
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Lint with Ruff
         run: |
