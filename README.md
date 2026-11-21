@@ -70,6 +70,106 @@ This repository is the ultimate guide for mastering advanced Spark Performance T
 
 ---
 
+---
+
+## 🖼️ Master Whiteboard Architecture Blueprints
+
+The repository incorporates publication-grade architectural whiteboard blueprints mirrored under [`assets/whiteboards/`](assets/whiteboards) and indexed with comprehensive multi-persona breakdowns, failure modes, and engine internals in [`docs/whiteboard_diagrams/README.md`](docs/whiteboard_diagrams/README.md).
+
+### 📐 Visual Blueprints Showcase (2x2 Grid)
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-data-skew-aqe-optimization">
+        <img src="assets/whiteboards/spark_data_skew_aqe_optimization.webp" alt="Apache Spark Data Skew Remediation & AQE Optimization" width="100%" />
+      </a>
+      <br><strong>Apache Spark Data Skew Remediation & AQE Optimization</strong><br>
+      <em>Synthetic skew benchmarks: Diagnosing stragglers, two-phase key salting, and AQE partition splitting.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-memory-management-spill">
+        <img src="assets/whiteboards/spark_memory_management_spill_diagram.webp" alt="Apache Spark Memory Management & Shuffle Spilling Mechanics" width="100%" />
+      </a>
+      <br><strong>Apache Spark Memory Management & Shuffle Spilling Mechanics</strong><br>
+      <em>Unified memory manager, execution vs storage borrowing, and Tungsten spill-to-disk triage runbooks.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-shuffle-memory-execution">
+        <img src="assets/whiteboards/spark_shuffle_memory_execution.webp" alt="Apache Spark Memory Architecture & Shuffle Mechanics" width="100%" />
+      </a>
+      <br><strong>Apache Spark Memory Architecture & Shuffle Mechanics</strong><br>
+      <em>Shuffle block transfer, SortShuffleWriter, index and data files, and external shuffle service mechanics.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-join-decision-tree">
+        <img src="assets/whiteboards/spark_join_decision_tree.webp" alt="Apache Spark Join Strategy Selection Decision Tree" width="100%" />
+      </a>
+      <br><strong>Apache Spark Join Strategy Selection Decision Tree</strong><br>
+      <em>Join strategy selection algorithm: Broadcast Hash Join vs Shuffle Hash Join vs Sort-Merge Join vs Cartesian.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-catalyst-photon-engine">
+        <img src="assets/whiteboards/catalyst_photon_engine.webp" alt="Databricks Compute: Catalyst Optimizer, AQE & Photon" width="100%" />
+      </a>
+      <br><strong>Databricks Compute: Catalyst Optimizer, AQE & Photon</strong><br>
+      <em>5-phase compiler: Unresolved AST, logical optimization, cost-based physical planning, and code generation.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-aqe-dynamic-optimization">
+        <img src="assets/whiteboards/spark_aqe_architecture_diagram.webp" alt="Apache Spark Adaptive Query Execution (AQE) Architecture" width="100%" />
+      </a>
+      <br><strong>Apache Spark Adaptive Query Execution (AQE) Architecture</strong><br>
+      <em>Runtime re-optimization: Coalescing shuffle partitions, dynamic join strategy switching, and skew handling.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#photon-engine-vs-jvm">
+        <img src="assets/whiteboards/photon_engine_vs_jvm.webp" alt="Databricks Photon Native C++ Engine vs. Classic Spark JVM" width="100%" />
+      </a>
+      <br><strong>Photon Native C++ Engine vs. Classic Spark JVM</strong><br>
+      <em>SIMD vectorized hardware acceleration, off-heap columnar buffers, and eliminating JVM GC pause overhead.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-broadcast-accumulators">
+        <img src="assets/whiteboards/spark_broadcast_accumulators.webp" alt="Apache Spark Broadcast Variables vs. Accumulators Architecture" width="100%" />
+      </a>
+      <br><strong>Spark Broadcast Variables vs. Accumulators Architecture</strong><br>
+      <em>BitTorrent P2P broadcast distribution vs driver-aggregated task metrics and side-effect guarantees.</em>
+    </td>
+  </tr>
+</table>
+
+> 🔍 **Explore all 52 blueprints with 5-persona breakdowns, failure modes, and engine internals in [docs/whiteboard_diagrams/README.md](docs/whiteboard_diagrams/README.md)**.
+
+---
+
+## 🌐 Ecosystem Interlinking & Sister Repositories
+
+The Modern Data Engineering Lakehouse Ecosystem is an integrated suite of 13 production-grade, specialized repositories anchored by the **[Modern Data Engineer Platform (`moderndataengineer.uk`)](https://github.com/santoshjammi29/moderndataengineer)**. Use this cross-reference matrix to navigate directly between complementary implementations across our repositories:
+
+| Repository | Focus & Domain | Tightly Coupled Cross-Reference & Integration Points |
+| :--- | :--- | :--- |
+| **[The PySpark Handbook](https://github.com/santoshjammi29/pyspark-handbook)** | 105 PySpark Production Code Recipes | • **Companion Code Drills**: 105 executable PySpark recipes for AQE, Tungsten memory, and Arrow UDFs.<br>• **Shuffle Tuning**: Code-level salting implementations validating the benchmarks in this repo. |
+| **[The Databricks Handbook](https://github.com/santoshjammi29/databricks-handbook)** | 105 Databricks Production Recipes & Unity Catalog | • **Databricks Runtime & Photon**: Executing these performance benchmarks on Serverless DBSQL and Photon compute clusters.<br>• **Delta Lake Optimization**: Liquid Clustering and Deletion Vectors benchmarks. |
+| **[Azure Databricks Blueprints](https://github.com/santoshjammi29/azure-databricks-project-blueprints)** | 3 Enterprise Reference Architectures | • **Real-World Workloads**: Applying these skew salting and memory triage runbooks to large retail fact joins and streaming fraud detection.<br>• **Production Deployment**: Packaging benchmark suites with Databricks Asset Bundles (DABs). |
+| **[Banking Risk Lakehouse](https://github.com/santoshjammi29/enterprise-banking-risk-alm-lakehouse)** | Regulated Financial Lakehouse (BCBS 239 & IFRS 9) | • **Vectorized Simulation**: Benchmarking PyArrow Pandas UDF cash flow calculations under extreme memory pressure.<br>• **Audit Reconciliations**: High-volume financial ledger joins without shuffle spills. |
+| **[DataOps & CI/CD Handbook](https://github.com/santoshjammi29/dataops-cicd-handbook)** | GitOps, DABs, Airflow & Platform Engineering | • **Automated Performance Testing**: Incorporating Spark execution plan regression testing into CI/CD pipelines.<br>• **Runbook Automation**: Emergency triage runbooks for Executor OOM (Exit code 137) and Driver OOM. |
+| **[The SQL Handbook](https://github.com/santoshjammi29/sql-handbook)** | Relational Query Engines, MPP & Concurrency | • **MPP vs Spark Execution**: Comparing Spark Sort-Merge Joins with SQL Server Hash Match and MPP distributed queries.<br>• **Execution Plan Reading**: Translating Spark EXPLAIN plans to relational query execution plans. |
+| **[The dbt Handbook](https://github.com/santoshjammi29/dbt-handbook)** | Analytics Engineering, dbt Mesh & Contracts | • **dbt Performance on Spark**: Optimizing incremental dbt models running on Apache Spark and Databricks SQL.<br>• **Partition Pruning**: Aligning dbt models with Spark partition schemes to eliminate full table scans. |
+| **[Streaming Handbook](https://github.com/santoshjammi29/streaming-handbook)** | Kafka KRaft, Apache Flink & Event Architecture | • **Structured Streaming Tuning**: Tuning RocksDB state store memory, checkpoint frequencies, and watermark lateness.<br>• **Micro-batch Profiling**: Spark UI metrics for streaming trigger execution durations. |
+| **[System Design Handbook](https://github.com/santoshjammi29/data-system-design-handbook)** | Distributed Storage, Table Formats & BCDR | • **Storage Format Benchmarks**: Parquet vs ORC vs Avro serialization performance and compression ratios.<br>• **Table Formats**: Delta Lake vs Apache Iceberg read and write throughput comparisons. |
+| **[Azure Cheat Sheet](https://github.com/santoshjammi29/azure-cheat-sheet)** | Fabric OneLake, Synapse & Azure Infrastructure | • **Fabric Spark Tuning**: Capacity Unit (CU) smoothing, executor sizing, and V-Order Parquet write optimization.<br>• **Azure VMs**: Selecting compute-optimized (F-series) vs memory-optimized (E-series) VMs for Spark. |
+| **[Interview Handbook](https://github.com/santoshjammi29/data-engineering-interview-handbook)** | Architectural Defense Playbooks & Concepts | • **100 Spark Data Issues Defense**: Playbook 08 (100 Spark Data Issues & Corruptions) with complete solutions.<br>• **Pillar 01 & 11**: Spark 3.5 engine internals, Catalyst compiler, and PyArrow IPC memory models. |
+| **[Modern Data Engineer Hub](https://github.com/santoshjammi29/moderndataengineer)** | Central Edge Presentation Platform | • **Interactive Whiteboard Viewer**: Pan, zoom, and inspect all 52 blueprints at [moderndataengineer.uk/whiteboards](https://moderndataengineer.uk/whiteboards).<br>• **Synthetic Skew & Spill Lab**: Interactive web simulator at [moderndataengineer.uk/spark-lab](https://moderndataengineer.uk/spark-lab). |
+
+---
+
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/afaque-ahmad-5a5847129/)
