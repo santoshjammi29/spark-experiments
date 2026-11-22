@@ -2,14 +2,15 @@
 
 > **Interactive Checkbox Study Tracker & Mastery Progression**  
 > **Canonical Repository**: [santoshjammi29/spark-experiments](https://github.com/santoshjammi29/spark-experiments) | **Ecosystem**: [moderndataengineer.uk](https://moderndataengineer.uk)  
-> **Total Exercises & Drills**: `11` | **Primary Pillar**: `Apache Spark & Distributed Compute`
+> **Total Tracked Drills**: `11` | **Primary Authority**: `Apache Spark & Distributed Compute Engine`  
+> **Structure**: Grouped by **Relevant Functional Sections**, then by **Difficulty Level**. All sections are **collapsible and collapsed by default**.
 
 ---
 
 ## How to Use This Roadmap
 
 1. **Fork this repository** to your personal GitHub account.
-2. Work through the modules in sequence or target specific architectural topics.
+2. Click to expand any functional section below.
 3. Check off boxes (`- [x]`) as you complete each exercise, drill, or notebook.
 4. Commit and push your progress to your personal branch to track your career journey!
 
@@ -19,33 +20,40 @@ Progress: [ ] 0 / 11 Completed (0.0%)
 
 ---
 
-## Curriculum Structure: The 4 Mastery Tiers
+## 📚 Functional Sections & Difficulty Breakdown
 
-```mermaid
-flowchart LR
-    T1["Tier 1: Foundations<br/>(Level 100)"] --> T2["Tier 2: Core Mechanics<br/>(Level 200)"]
-    T2 --> T3["Tier 3: Complex Scenarios<br/>(Level 300)"]
-    T3 --> T4["Tier 4: Staff Architect<br/>(Level 400)"]
-```
+<details>
+<summary><b>📂 Section: Spark (10 Drills)</b> — <i>Click to expand</i></summary>
 
-### 🟡 Tier 2: Core Mechanics & Implementation (Level 200)
-> Production pipeline patterns, schema validation, standard transformations, and unit tests.
+<details>
+<summary>&nbsp;&nbsp;<b>🟠 Tier 3: Complex Scenarios & Performance (Level 300) (10 Drills)</b></summary>
 
-- [ ] `spark-experiments-curriculum-topics` — [Topics Directory: Spark Experiments](topics/README.md) `Level 200`
+- [ ] `spark-experiments-1_generate_skewed_data` — [Generate Skewed Data](spark/1_data_skew/1_generate_skewed_data.ipynb) `L300`
+- [ ] `spark-experiments-2_skew_dataset_simulation` — [Skew Dataset Simulation](spark/1_data_skew/2_skew_dataset_simulation.ipynb) `L300`
+- [ ] `spark-experiments-3_solving_data_skew_aqe_broadcast` — [Solving Data Skew Aqe Broadcast](spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) `L300`
+- [ ] `spark-experiments-4_salting` — [Salting](spark/1_data_skew/4_salting.ipynb) `L300`
+- [ ] `spark-experiments-2_reading_query_plans` — [Reading Query Plans](spark/2_reading_query_plans.ipynb) `L300`
+- [ ] `spark-experiments-3_reading_query_DAGs` — [Reading Query Dags](spark/3_reading_query_DAGs.ipynb) `L300`
+- [ ] `spark-experiments-4_caching` — [Caching](spark/4_caching.ipynb) `L300`
+- [ ] `spark-experiments-5_0_partitioning` — [0 Partitioning](spark/5_0_partitioning.ipynb) `L300`
+- [ ] `spark-experiments-5_1_dynamic_partition_pruning` — [1 Dynamic Partition Pruning](spark/5_1_dynamic_partition_pruning.ipynb) `L300`
+- [ ] `spark-experiments-6_0_bucketing` — [0 Bucketing](spark/6_0_bucketing.ipynb) `L300`
 
-### 🟠 Tier 3: Complex Scenarios, Edge Cases & Performance (Level 300)
-> Performance tuning, partition skew, memory triage runbooks, and failure recovery.
+</details>
 
-- [ ] `spark-experiments-1_generate_skewed_data` — [Generate Skewed Data](spark/1_data_skew/1_generate_skewed_data.ipynb) `Level 300`
-- [ ] `spark-experiments-2_skew_dataset_simulation` — [Skew Dataset Simulation](spark/1_data_skew/2_skew_dataset_simulation.ipynb) `Level 300`
-- [ ] `spark-experiments-3_solving_data_skew_aqe_broadcast` — [Solving Data Skew Aqe Broadcast](spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) `Level 300`
-- [ ] `spark-experiments-4_salting` — [Salting](spark/1_data_skew/4_salting.ipynb) `Level 300`
-- [ ] `spark-experiments-2_reading_query_plans` — [Reading Query Plans](spark/2_reading_query_plans.ipynb) `Level 300`
-- [ ] `spark-experiments-3_reading_query_DAGs` — [Reading Query Dags](spark/3_reading_query_DAGs.ipynb) `Level 300`
-- [ ] `spark-experiments-4_caching` — [Caching](spark/4_caching.ipynb) `Level 300`
-- [ ] `spark-experiments-5_0_partitioning` — [0 Partitioning](spark/5_0_partitioning.ipynb) `Level 300`
-- [ ] `spark-experiments-5_1_dynamic_partition_pruning` — [1 Dynamic Partition Pruning](spark/5_1_dynamic_partition_pruning.ipynb) `Level 300`
-- [ ] `spark-experiments-6_0_bucketing` — [0 Bucketing](spark/6_0_bucketing.ipynb) `Level 300`
+</details>
+
+<details>
+<summary><b>📂 Section: Topics (1 Drills)</b> — <i>Click to expand</i></summary>
+
+<details>
+<summary>&nbsp;&nbsp;<b>🟡 Tier 2: Core Mechanics & Implementation (Level 200) (1 Drills)</b></summary>
+
+- [ ] `spark-experiments-curriculum-topics` — [Topics Directory: Spark Experiments](topics/README.md) `L200`
+
+</details>
+
+</details>
 
 ---
 
