@@ -1,4 +1,4 @@
-## Apache Spark 30 Concepts 
+## Apache Spark 30 Concepts
 
 ![](video_thumbnail.jpg)
 [YouTube Video Link: Apache Spark 30 Concepts](https://www.youtube.com/watch?v=z4Owc8RRApg)
@@ -27,7 +27,7 @@ This folder contains all diagrams used in the Miro board for explaining **30 mos
 20. Catalyst Optimizer
 21. Job
 22. Stage
-23. Task 
+23. Task
 24. On Heap Memory
 25. Execution Memory
 26. Storage Memory
