@@ -3,8 +3,8 @@
   "github": "santoshjammi29/spark-experiments",
   "name": "Spark Experiments",
   "role": "Empirical laboratory: Reproducible data skew generation (1M+ rows), two-phase salting benchmarks, query plan analysis",
-  "last_synced": "2026-11-21T04:54:58.631714Z",
-  "entry_count": 10,
+  "last_synced": "2026-11-22T07:34:24.148001Z",
+  "entry_count": 11,
   "entries": [
     {
       "id": "spark-experiments-1_generate_skewed_data",
@@ -102,6 +102,16 @@
       "title": "0 Bucketing",
       "difficulty": "L300",
       "relative_path": "spark/6_0_bucketing.ipynb",
+      "pillars": [
+        "Apache Spark & Distributed Compute"
+      ]
+    },
+    {
+      "id": "spark-experiments-curriculum-topics",
+      "type": "curriculum_topics_catalog",
+      "title": "Topics Directory: Spark Experiments",
+      "difficulty": "L200",
+      "relative_path": "topics/README.md",
       "pillars": [
         "Apache Spark & Distributed Compute"
       ]

@@ -2,7 +2,6 @@
 
 This repository is the ultimate guide for mastering advanced Spark Performance Tuning and Optimization concepts and for anyone preparing for Data Engineering Interviews involving Spark. Additionally, this repository serves as a reference for all the code snippets used in my [Spark Performance Tuning Playlist](https://www.youtube.com/playlist?list=PLWAuYt0wgRcLCtWzUxNg4BjnYlCZNEVth) on YouTube. The goal of the playlist and the accompanying code snippets is to make complex concepts in Apache Spark easy to understand, while also developing a deep understanding of how things work under the hood.
 
-
 ## Concepts Covered
 
 | Concept             | YouTube Link                                            | Code                                                     |
@@ -20,7 +19,6 @@ This repository is the ultimate guide for mastering advanced Spark Performance T
 | Salting                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/rZGsc5y8AQk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/1_data_skew/4_salting.ipynb) |
 | AQE & Broadcast Joins                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/bRjVa7MgsBM) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) |
 | Dynamic Partition Pruning                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/s8Z8Gex7VFw) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/5_1_dynamic_partition_pruning.ipynb) |
-
 
 ## 🧠 Core Curriculum Concepts & Topics (34 Spark Tuning Topics Covered)
 
