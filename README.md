@@ -61,7 +61,6 @@ python3 scripts/run_tests.py
 | AQE & Broadcast Joins                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/bRjVa7MgsBM) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) |
 | Dynamic Partition Pruning                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/s8Z8Gex7VFw) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/5_1_dynamic_partition_pruning.ipynb) |
 
-
 ---
 
 ## 🖼️ Master Whiteboard Architecture Blueprints
@@ -478,8 +477,6 @@ The repository incorporates publication-grade architectural whiteboard blueprint
 
 </details>
 
-
-
 ## 🌐 Ecosystem Interlinking & Sister Repositories
 
 The Modern Data Engineering Lakehouse Ecosystem is an integrated suite of 14 production-grade, specialized repositories anchored by the **[Modern Data Engineer Platform (`moderndataengineer.uk`)](https://github.com/santoshjammi29/moderndataengineer)**. Use this cross-reference matrix to navigate directly between complementary implementations across our repositories:
@@ -506,7 +503,6 @@ The Modern Data Engineering Lakehouse Ecosystem is an integrated suite of 14 pro
 
 - [LinkedIn](https://www.linkedin.com/in/afaque-ahmad-5a5847129/)
 - [YouTube](https://www.youtube.com/@afaqueahmad7117)
-
 
 ---
 
