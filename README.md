@@ -2,27 +2,149 @@
   <img src="assets/repo-header.svg" width="100%" alt="Apache Spark Performance Experiments Banner" />
 </p>
 
-# Spark Performance Tuning
+# Apache Spark Performance Experiments & Tuning Lab
 
-This repository is the ultimate guide for mastering advanced Spark Performance Tuning and Optimization concepts and for anyone preparing for Data Engineering Interviews involving Spark. Additionally, this repository serves as a reference for all the code snippets used in my [Spark Performance Tuning Playlist](https://www.youtube.com/playlist?list=PLWAuYt0wgRcLCtWzUxNg4BjnYlCZNEVth) on YouTube. The goal of the playlist and the accompanying code snippets is to make complex concepts in Apache Spark easy to understand, while also developing a deep understanding of how things work under the hood.
+<p align="center">
+  <a href="https://github.com/santoshjammi29/spark-experiments/actions"><img src="https://img.shields.io/badge/CI-Passing-emerald?style=flat-square&logo=githubactions&logoColor=white" alt="CI Status"></a>
+  <a href="https://spark.apache.org/"><img src="https://img.shields.io/badge/Apache_Spark-3.5%2B_%2F_4.0-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="Spark 3.5+"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://moderndataengineer.uk"><img src="https://img.shields.io/badge/Ecosystem-Modern_Data_Engineer-blueviolet?style=flat-square" alt="Ecosystem Platform"></a>
+</p>
 
-## Concepts Covered
+## 🎯 Overview & Mission
+
+This repository is the definitive hands-on experimental lab for mastering advanced Apache Spark performance tuning, execution internals, and cluster memory triage. Accompanying the popular **[Spark Performance Tuning Video Series](https://www.youtube.com/playlist?list=PLWAuYt0wgRcLCtWzUxNg4BjnYlCZNEVth)** on YouTube, this lab provides reproducible Jupyter notebooks, synthetic skew datasets, and live query plan diagnostics designed to bridge the gap between abstract Spark concepts and real-world production engineering.
+
+---
+
+## 🚀 Quickstart & Reproducible Lab Setup
+
+Get the entire reproducible Spark experiment environment running locally in under 2 minutes:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/santoshjammi29/spark-experiments.git
+cd spark-experiments
+
+# 2. Set up virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# 3. Install dependencies (PySpark, Jupyter, Pandas)
+pip install -r requirements.txt
+
+# 4. Launch Jupyter Lab / Notebooks
+jupyter notebook
+
+# 5. Run automated notebook integrity tests
+python3 scripts/run_tests.py
+```
+
+---
+
+## 🔬 Hands-On Performance Experiments & Video Catalog
 
 | Concept             | YouTube Link                                            | Code                                                     |
 |---------------------|---------------------------------------------------------|----------------------------------------------------------|
 | Spark 30 Concepts           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/z4Owc8RRApg) | |
-| Spark Query Plans           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/KnUXztKueMU) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/2_reading_query_plans.ipynb) |
-| Spark DAGs           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/O_45zAz1OGk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/3_reading_query_DAGs.ipynb) |
+| Spark Query Plans           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/KnUXztKueMU) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/2_reading_query_plans.ipynb) |
+| Spark DAGs           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/O_45zAz1OGk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/3_reading_query_DAGs.ipynb) |
 | Spark Memory Management           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/sXL1qgrPysg) |  |
 | Spark Executor Tuning  | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/mA96gUESVZc) |  |
 | Shuffle Partitions      | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/q1LtBU_ca20) |  |
-| Data Partitioning        | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/fZndmQasykk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/5_0_partitioning.ipynb) |
-| Bucketing       | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/1kWl6d1yeKA) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/6_0_bucketing.ipynb) |
-| Caching           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/FujwRYkBwM4) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/4_caching.ipynb) |
-| Data Skew                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/9Ss-_y7njKE) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/1_data_skew/) |
-| Salting                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/rZGsc5y8AQk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/1_data_skew/4_salting.ipynb) |
-| AQE & Broadcast Joins                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/bRjVa7MgsBM) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) |
-| Dynamic Partition Pruning                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/s8Z8Gex7VFw) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](/spark/5_1_dynamic_partition_pruning.ipynb) |
+| Data Partitioning        | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/fZndmQasykk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/5_0_partitioning.ipynb) |
+| Bucketing       | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/1kWl6d1yeKA) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/6_0_bucketing.ipynb) |
+| Caching           | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/FujwRYkBwM4) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/4_caching.ipynb) |
+| Data Skew                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/9Ss-_y7njKE) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/1_data_skew/) |
+| Salting                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/rZGsc5y8AQk) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/1_data_skew/4_salting.ipynb) |
+| AQE & Broadcast Joins                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/bRjVa7MgsBM) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) |
+| Dynamic Partition Pruning                 | [![YouTube](https://img.shields.io/badge/YouTube-red?style=flat-square&logo=youtube)](https://youtu.be/s8Z8Gex7VFw) | [![Python](https://img.shields.io/badge/Code-Python-blue?style=flat-square&logo=python&logoColor=white)](spark/5_1_dynamic_partition_pruning.ipynb) |
+
+
+---
+
+## 🖼️ Master Whiteboard Architecture Blueprints
+
+The repository incorporates publication-grade architectural whiteboard blueprints mirrored under [`assets/whiteboards/`](assets/whiteboards) and indexed with comprehensive multi-persona breakdowns, failure modes, and engine internals in [`docs/whiteboard_diagrams/README.md`](docs/whiteboard_diagrams/README.md).
+
+- 🖼️ **[Master Whiteboard Blueprints Hub](docs/whiteboard_diagrams/handbook_whiteboard_blueprints.md)**: Complete whiteboard architecture blueprints with storage vs. compute, control vs. data planes, memory tiers, and failure modes.
+- 📊 **[Spark Architecture & Tuning Cheatsheet](assets/whiteboards/spark_architecture_catalyst_cheatsheet.jpg)**: High-resolution visual cheatsheet covering cluster topology, Catalyst compiler phases, and memory tiers.
+- 🔀 **[Join Strategies Decision Matrix](assets/whiteboards/spark_join_strategies_decision_matrix.jpg)**: Visual flowchart and decision tree for distributed joins and broadcast thresholds.
+- ⚡ **[Skew & Memory Spill Triage](assets/whiteboards/spark_performance_skew_spill_triage.jpg)**: Step-by-step diagnostic workflow for data skew, spill to disk, and OOM triage.
+
+### 📐 Visual Blueprints Showcase (2x2 Grid)
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-data-skew-aqe-optimization">
+        <img src="assets/whiteboards/spark_data_skew_aqe_optimization.webp" alt="Apache Spark Data Skew Remediation & AQE Optimization" width="100%" />
+      </a>
+      <br><strong>Apache Spark Data Skew Remediation & AQE Optimization</strong><br>
+      <em>Synthetic skew benchmarks: Diagnosing stragglers, two-phase key salting, and AQE partition splitting.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-memory-management-spill">
+        <img src="assets/whiteboards/spark_memory_management_spill_diagram.webp" alt="Apache Spark Memory Management & Shuffle Spilling Mechanics" width="100%" />
+      </a>
+      <br><strong>Apache Spark Memory Management & Shuffle Spilling Mechanics</strong><br>
+      <em>Unified memory manager, execution vs storage borrowing, and Tungsten spill-to-disk triage runbooks.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-shuffle-memory-execution">
+        <img src="assets/whiteboards/spark_shuffle_memory_execution.webp" alt="Apache Spark Memory Architecture & Shuffle Mechanics" width="100%" />
+      </a>
+      <br><strong>Apache Spark Memory Architecture & Shuffle Mechanics</strong><br>
+      <em>Shuffle block transfer, SortShuffleWriter, index and data files, and external shuffle service mechanics.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-join-decision-tree">
+        <img src="assets/whiteboards/spark_join_decision_tree.webp" alt="Apache Spark Join Strategy Selection Decision Tree" width="100%" />
+      </a>
+      <br><strong>Apache Spark Join Strategy Selection Decision Tree</strong><br>
+      <em>Join strategy selection algorithm: Broadcast Hash Join vs Shuffle Hash Join vs Sort-Merge Join vs Cartesian.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-catalyst-photon-engine">
+        <img src="assets/whiteboards/catalyst_photon_engine.webp" alt="Databricks Compute: Catalyst Optimizer, AQE & Photon" width="100%" />
+      </a>
+      <br><strong>Databricks Compute: Catalyst Optimizer, AQE & Photon</strong><br>
+      <em>5-phase compiler: Unresolved AST, logical optimization, cost-based physical planning, and code generation.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-aqe-dynamic-optimization">
+        <img src="assets/whiteboards/spark_aqe_architecture_diagram.webp" alt="Apache Spark Adaptive Query Execution (AQE) Architecture" width="100%" />
+      </a>
+      <br><strong>Apache Spark Adaptive Query Execution (AQE) Architecture</strong><br>
+      <em>Runtime re-optimization: Coalescing shuffle partitions, dynamic join strategy switching, and skew handling.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#photon-engine-vs-jvm">
+        <img src="assets/whiteboards/photon_engine_vs_jvm.webp" alt="Databricks Photon Native C++ Engine vs. Classic Spark JVM" width="100%" />
+      </a>
+      <br><strong>Photon Native C++ Engine vs. Classic Spark JVM</strong><br>
+      <em>SIMD vectorized hardware acceleration, off-heap columnar buffers, and eliminating JVM GC pause overhead.</em>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/whiteboard_diagrams/README.md#spark-broadcast-accumulators">
+        <img src="assets/whiteboards/spark_broadcast_accumulators.webp" alt="Apache Spark Broadcast Variables vs. Accumulators Architecture" width="100%" />
+      </a>
+      <br><strong>Spark Broadcast Variables vs. Accumulators Architecture</strong><br>
+      <em>BitTorrent P2P broadcast distribution vs driver-aggregated task metrics and side-effect guarantees.</em>
+    </td>
+  </tr>
+</table>
+
+> 🔍 **Explore all 52 blueprints with 5-persona breakdowns, failure modes, and engine internals in [docs/whiteboard_diagrams/README.md](docs/whiteboard_diagrams/README.md)**.
+
+---
 
 ## 🧠 Core Curriculum Concepts & Topics (135 Topics Covered)
 
@@ -357,88 +479,6 @@ This repository is the ultimate guide for mastering advanced Spark Performance T
 </details>
 
 
-
-## 🖼️ Master Whiteboard Architecture Blueprints
-
-The repository incorporates publication-grade architectural whiteboard blueprints mirrored under [`assets/whiteboards/`](assets/whiteboards) and indexed with comprehensive multi-persona breakdowns, failure modes, and engine internals in [`docs/whiteboard_diagrams/README.md`](docs/whiteboard_diagrams/README.md).
-
-- 🖼️ **[Master Whiteboard Blueprints Hub](docs/whiteboard_diagrams/handbook_whiteboard_blueprints.md)**: Complete whiteboard architecture blueprints with storage vs. compute, control vs. data planes, memory tiers, and failure modes.
-- 📊 **[Spark Architecture & Tuning Cheatsheet](assets/whiteboards/spark_architecture_catalyst_cheatsheet.jpg)**: High-resolution visual cheatsheet covering cluster topology, Catalyst compiler phases, and memory tiers.
-- 🔀 **[Join Strategies Decision Matrix](assets/whiteboards/spark_join_strategies_decision_matrix.jpg)**: Visual flowchart and decision tree for distributed joins and broadcast thresholds.
-- ⚡ **[Skew & Memory Spill Triage](assets/whiteboards/spark_performance_skew_spill_triage.jpg)**: Step-by-step diagnostic workflow for data skew, spill to disk, and OOM triage.
-
-### 📐 Visual Blueprints Showcase (2x2 Grid)
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-data-skew-aqe-optimization">
-        <img src="assets/whiteboards/spark_data_skew_aqe_optimization.webp" alt="Apache Spark Data Skew Remediation & AQE Optimization" width="100%" />
-      </a>
-      <br><strong>Apache Spark Data Skew Remediation & AQE Optimization</strong><br>
-      <em>Synthetic skew benchmarks: Diagnosing stragglers, two-phase key salting, and AQE partition splitting.</em>
-    </td>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-memory-management-spill">
-        <img src="assets/whiteboards/spark_memory_management_spill_diagram.webp" alt="Apache Spark Memory Management & Shuffle Spilling Mechanics" width="100%" />
-      </a>
-      <br><strong>Apache Spark Memory Management & Shuffle Spilling Mechanics</strong><br>
-      <em>Unified memory manager, execution vs storage borrowing, and Tungsten spill-to-disk triage runbooks.</em>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-shuffle-memory-execution">
-        <img src="assets/whiteboards/spark_shuffle_memory_execution.webp" alt="Apache Spark Memory Architecture & Shuffle Mechanics" width="100%" />
-      </a>
-      <br><strong>Apache Spark Memory Architecture & Shuffle Mechanics</strong><br>
-      <em>Shuffle block transfer, SortShuffleWriter, index and data files, and external shuffle service mechanics.</em>
-    </td>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-join-decision-tree">
-        <img src="assets/whiteboards/spark_join_decision_tree.webp" alt="Apache Spark Join Strategy Selection Decision Tree" width="100%" />
-      </a>
-      <br><strong>Apache Spark Join Strategy Selection Decision Tree</strong><br>
-      <em>Join strategy selection algorithm: Broadcast Hash Join vs Shuffle Hash Join vs Sort-Merge Join vs Cartesian.</em>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-catalyst-photon-engine">
-        <img src="assets/whiteboards/catalyst_photon_engine.webp" alt="Databricks Compute: Catalyst Optimizer, AQE & Photon" width="100%" />
-      </a>
-      <br><strong>Databricks Compute: Catalyst Optimizer, AQE & Photon</strong><br>
-      <em>5-phase compiler: Unresolved AST, logical optimization, cost-based physical planning, and code generation.</em>
-    </td>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-aqe-dynamic-optimization">
-        <img src="assets/whiteboards/spark_aqe_architecture_diagram.webp" alt="Apache Spark Adaptive Query Execution (AQE) Architecture" width="100%" />
-      </a>
-      <br><strong>Apache Spark Adaptive Query Execution (AQE) Architecture</strong><br>
-      <em>Runtime re-optimization: Coalescing shuffle partitions, dynamic join strategy switching, and skew handling.</em>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#photon-engine-vs-jvm">
-        <img src="assets/whiteboards/photon_engine_vs_jvm.webp" alt="Databricks Photon Native C++ Engine vs. Classic Spark JVM" width="100%" />
-      </a>
-      <br><strong>Photon Native C++ Engine vs. Classic Spark JVM</strong><br>
-      <em>SIMD vectorized hardware acceleration, off-heap columnar buffers, and eliminating JVM GC pause overhead.</em>
-    </td>
-    <td width="50%" valign="top">
-      <a href="docs/whiteboard_diagrams/README.md#spark-broadcast-accumulators">
-        <img src="assets/whiteboards/spark_broadcast_accumulators.webp" alt="Apache Spark Broadcast Variables vs. Accumulators Architecture" width="100%" />
-      </a>
-      <br><strong>Spark Broadcast Variables vs. Accumulators Architecture</strong><br>
-      <em>BitTorrent P2P broadcast distribution vs driver-aggregated task metrics and side-effect guarantees.</em>
-    </td>
-  </tr>
-</table>
-
-> 🔍 **Explore all 52 blueprints with 5-persona breakdowns, failure modes, and engine internals in [docs/whiteboard_diagrams/README.md](docs/whiteboard_diagrams/README.md)**.
-
----
 
 ## 🌐 Ecosystem Interlinking & Sister Repositories
 
