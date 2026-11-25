@@ -1,45 +1,18 @@
-name: CI — Spark Experiments Integrity & Test Suite
+name: Handbook CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: Set up Python
-        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.11"
-          cache: pip
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Lint with Ruff
-        run: |
-          ruff check . --exit-zero
-
-      - name: Run Integrity & Notebook Test Suite
-        run: |
-          python3 scripts/run_tests.py
-
-      - name: Verify Git Hygiene
-        run: |
-          if git ls-files | grep -q '\.venv'; then
-            echo "FAIL: .venv tracked in git index"
-            exit 1
-          fi
-          if git ls-files | grep -q '\.parquet'; then
-            echo "FAIL: .parquet files tracked in git index"
-            exit 1
-          fi
-          echo "Git hygiene verified: No .venv or .parquet files in index."
+  ci:
+    uses: santoshjammi29/.github/.github/workflows/handbook-ci.yml@v1
+    with:
+      # spark-experiments stores empirical Jupyter benchmark notebooks; enforce empty outputs/execution_count.
+      allow_notebooks: true
