@@ -9,7 +9,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR))
 
-import tests.test_notebook_integrity as t_nb
+import tests.test_notebook_integrity as t_nb  # noqa: E402
 
 def main():
     print("▶ Running Spark Experiments Test Suite...")
@@ -28,7 +28,7 @@ def main():
         except Exception as e:
             print(f"  ✗ {name} failed: {e}")
             failed += 1
-    
+
     print(f"\nResults: {passed} passed, {failed} failed")
     if failed > 0:
         sys.exit(1)
