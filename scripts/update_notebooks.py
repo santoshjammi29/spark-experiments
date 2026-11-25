@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 
 # Paths
 base_dir = '/Users/santosh/Documents/antigravity/spark-experiments'
@@ -8,7 +7,7 @@ nb3_path = os.path.join(base_dir, 'spark/1_data_skew/3_solving_data_skew_aqe_bro
 nb4_path = os.path.join(base_dir, 'spark/1_data_skew/4_salting.ipynb')
 
 # --- 1. Update 3_solving_data_skew_aqe_broadcast.ipynb ---
-with open(nb3_path, 'r', encoding='utf-8') as f:
+with open(nb3_path, encoding='utf-8') as f:
     nb3 = json.load(f)
 
 nav_ribbon_3 = [
@@ -39,7 +38,7 @@ with open(nb3_path, 'w', encoding='utf-8') as f:
 print(f'nb3 updated successfully! Cell count: {len(nb3["cells"])}')
 
 # --- 2. Update 4_salting.ipynb ---
-with open(nb4_path, 'r', encoding='utf-8') as f:
+with open(nb4_path, encoding='utf-8') as f:
     nb4 = json.load(f)
 
 nav_ribbon_4 = [

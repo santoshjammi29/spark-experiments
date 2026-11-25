@@ -40,7 +40,7 @@ def test_notebooks_python_ast_syntax():
                     ast.parse(code_str)
                 except SyntaxError as se:
                     syntax_errors.append(f"{nb.name} cell {idx}: {se}")
-    assert not syntax_errors, f"Syntax errors in notebooks:\n" + "\n".join(syntax_errors)
+    assert not syntax_errors, "Syntax errors in notebooks:\n" + "\n".join(syntax_errors)
 
 def test_no_git_leaks():
     import subprocess

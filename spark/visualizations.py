@@ -261,7 +261,7 @@ def plot_skew_mitigation_benchmark(smj_time, aqe_time, bhj_time, save_path=None)
 
     bars = ax.bar(strategies, times, color=colors, width=0.45, edgecolor=PALETTE["border"])
 
-    for bar, t in zip(bars, times):
+    for bar, t in zip(bars, times, strict=False):
         diff = ((t - smj_time) / smj_time) * 100 if smj_time else 0
         ann = f"{t:.2f}s"
         if diff != 0:

@@ -14,5 +14,6 @@ jobs:
   ci:
     uses: santoshjammi29/.github/.github/workflows/handbook-ci.yml@v1
     with:
-      # spark-experiments stores empirical Jupyter benchmark notebooks; enforce empty outputs/execution_count.
+      # Keep docs/images/*.png Spark UI screenshots (up to 1.2 MB) and cleared .ipynb benchmarks.
+      max_file_kb: 1500
       allow_notebooks: true
