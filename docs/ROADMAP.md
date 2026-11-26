@@ -26,18 +26,18 @@ Progress: [ ] 0 / 11 Completed (0.0%)
 <summary><b>📂 Section: Spark (10 Drills)</b> — <i>Click to expand</i></summary>
 
 <details>
-<summary>&nbsp;&nbsp;<b>🟠 Tier 3: Complex Scenarios & Performance (Level 300) (10 Drills)</b></summary>
+<summary>&nbsp;&nbsp;<b>🟠 Tier 3: Complex Scenarios & Performance (Level 3) (10 Drills)</b></summary>
 
-- [ ] `spark-experiments-1_generate_skewed_data` — [Generate Skewed Data](../spark/1_data_skew/1_generate_skewed_data.ipynb) `L300`
-- [ ] `spark-experiments-2_skew_dataset_simulation` — [Skew Dataset Simulation](../spark/1_data_skew/2_skew_dataset_simulation.ipynb) `L300`
-- [ ] `spark-experiments-3_solving_data_skew_aqe_broadcast` — [Solving Data Skew Aqe Broadcast](../spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) `L300`
-- [ ] `spark-experiments-4_salting` — [Salting](../spark/1_data_skew/4_salting.ipynb) `L300`
-- [ ] `spark-experiments-2_reading_query_plans` — [Reading Query Plans](../spark/2_reading_query_plans.ipynb) `L300`
-- [ ] `spark-experiments-3_reading_query_DAGs` — [Reading Query Dags](../spark/3_reading_query_DAGs.ipynb) `L300`
-- [ ] `spark-experiments-4_caching` — [Caching](../spark/4_caching.ipynb) `L300`
-- [ ] `spark-experiments-5_0_partitioning` — [0 Partitioning](../spark/5_0_partitioning.ipynb) `L300`
-- [ ] `spark-experiments-5_1_dynamic_partition_pruning` — [1 Dynamic Partition Pruning](../spark/5_1_dynamic_partition_pruning.ipynb) `L300`
-- [ ] `spark-experiments-6_0_bucketing` — [0 Bucketing](../spark/6_0_bucketing.ipynb) `L300`
+- [ ] `spark-experiments-1_generate_skewed_data` — [Generate Skewed Data](../spark/1_data_skew/1_generate_skewed_data.ipynb) `L3`
+- [ ] `spark-experiments-2_skew_dataset_simulation` — [Skew Dataset Simulation](../spark/1_data_skew/2_skew_dataset_simulation.ipynb) `L3`
+- [ ] `spark-experiments-3_solving_data_skew_aqe_broadcast` — [Solving Data Skew Aqe Broadcast](../spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb) `L3`
+- [ ] `spark-experiments-4_salting` — [Salting](../spark/1_data_skew/4_salting.ipynb) `L3`
+- [ ] `spark-experiments-2_reading_query_plans` — [Reading Query Plans](../spark/2_reading_query_plans.ipynb) `L3`
+- [ ] `spark-experiments-3_reading_query_DAGs` — [Reading Query Dags](../spark/3_reading_query_DAGs.ipynb) `L3`
+- [ ] `spark-experiments-4_caching` — [Caching](../spark/4_caching.ipynb) `L3`
+- [ ] `spark-experiments-5_0_partitioning` — [0 Partitioning](../spark/5_0_partitioning.ipynb) `L3`
+- [ ] `spark-experiments-5_1_dynamic_partition_pruning` — [1 Dynamic Partition Pruning](../spark/5_1_dynamic_partition_pruning.ipynb) `L3`
+- [ ] `spark-experiments-6_0_bucketing` — [0 Bucketing](../spark/6_0_bucketing.ipynb) `L3`
 
 </details>
 
@@ -47,9 +47,9 @@ Progress: [ ] 0 / 11 Completed (0.0%)
 <summary><b>📂 Section: Topics (1 Drills)</b> — <i>Click to expand</i></summary>
 
 <details>
-<summary>&nbsp;&nbsp;<b>🟡 Tier 2: Core Mechanics & Implementation (Level 200) (1 Drills)</b></summary>
+<summary>&nbsp;&nbsp;<b>🟡 Tier 2: Core Mechanics & Implementation (Level 2) (1 Drills)</b></summary>
 
-- [ ] `spark-experiments-curriculum-topics` — [Topics Directory: Spark Experiments](../topics/README.md) `L200`
+- [ ] `spark-experiments-curriculum-topics` — [Topics Directory: Spark Experiments](../topics/README.md) `L2`
 
 </details>
 

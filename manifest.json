@@ -10,7 +10,7 @@
       "id": "spark-experiments-1_generate_skewed_data",
       "type": "empirical_notebook",
       "title": "Generate Skewed Data",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/1_data_skew/1_generate_skewed_data.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -20,7 +20,7 @@
       "id": "spark-experiments-2_skew_dataset_simulation",
       "type": "empirical_notebook",
       "title": "Skew Dataset Simulation",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/1_data_skew/2_skew_dataset_simulation.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -30,7 +30,7 @@
       "id": "spark-experiments-3_solving_data_skew_aqe_broadcast",
       "type": "empirical_notebook",
       "title": "Solving Data Skew Aqe Broadcast",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/1_data_skew/3_solving_data_skew_aqe_broadcast.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -40,7 +40,7 @@
       "id": "spark-experiments-4_salting",
       "type": "empirical_notebook",
       "title": "Salting",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/1_data_skew/4_salting.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -50,7 +50,7 @@
       "id": "spark-experiments-2_reading_query_plans",
       "type": "empirical_notebook",
       "title": "Reading Query Plans",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/2_reading_query_plans.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -60,7 +60,7 @@
       "id": "spark-experiments-3_reading_query_DAGs",
       "type": "empirical_notebook",
       "title": "Reading Query Dags",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/3_reading_query_DAGs.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -70,7 +70,7 @@
       "id": "spark-experiments-4_caching",
       "type": "empirical_notebook",
       "title": "Caching",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/4_caching.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -80,7 +80,7 @@
       "id": "spark-experiments-5_0_partitioning",
       "type": "empirical_notebook",
       "title": "0 Partitioning",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/5_0_partitioning.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -90,7 +90,7 @@
       "id": "spark-experiments-5_1_dynamic_partition_pruning",
       "type": "empirical_notebook",
       "title": "1 Dynamic Partition Pruning",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/5_1_dynamic_partition_pruning.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -100,7 +100,7 @@
       "id": "spark-experiments-6_0_bucketing",
       "type": "empirical_notebook",
       "title": "0 Bucketing",
-      "difficulty": "L300",
+      "difficulty": "L3",
       "relative_path": "spark/6_0_bucketing.ipynb",
       "pillars": [
         "Apache Spark & Distributed Compute"
@@ -110,7 +110,7 @@
       "id": "spark-experiments-curriculum-topics",
       "type": "curriculum_topics_catalog",
       "title": "Topics Directory: Spark Experiments",
-      "difficulty": "L200",
+      "difficulty": "L2",
       "relative_path": "topics/README.md",
       "pillars": [
         "Apache Spark & Distributed Compute"
